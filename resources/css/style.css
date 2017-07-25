@@ -1,0 +1,129 @@
+html {
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.container {
+  width: 960px;
+}
+
+.mainBanner {
+  background-image: url("../images/glasses-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.topBar {
+  background: cadetblue;
+  color: white;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+nav {
+  margin: 1rem 0 1rem 0;
+}
+
+nav span {
+  margin-right: 2rem;
+}
+
+.sloganRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.slogan {
+  margin-top: 10rem;
+  margin-right: -2rem;
+  background-color: white;
+  padding: 1.5rem 5rem;
+}
+
+.slogan span {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.services {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.service {
+  width: 5rem;
+  height: 8rem;
+  margin-right: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service img {
+  width: 3.5rem;
+}
+
+.service span {
+  text-align: center;
+}
+
+.infos {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;	
+}
+
+.infoTitle {
+  font-weight: bold;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  background: cadetblue;
+  margin-bottom: 1rem;
+  width: 10rem;
+  color: white;  
+}
+
+.infoItem {
+  width: 35%;
+  margin-right: 5%;
+}
+
+.footer {
+  background: azure;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .logo {
+	margin: 4rem;
+}
