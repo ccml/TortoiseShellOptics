@@ -1,13 +1,51 @@
+/* --------------------------------------------------------------- */
+/* Setting the font base                                           */
+/* --------------------------------------------------------------- */
 html {
   font-family: Helvetica;
   font-size: 18px;
   line-height: 1.4;
 }
 
+/* --------------------------------------------------------------- */
+/* Some general class for responsive design                        */
+/* --------------------------------------------------------------- */
+.inlineHideForWebSite {
+  display: none;
+}
+
+.inlineHideForPhone {
+  display: inline;
+}
+
+@media only screen and (max-width: 704px) {
+  .inlineHideForWebSite {
+    display: inline;
+  }
+
+  .inlineHideForPhone {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* The container set a fixed width for content for a specified     */
+/* screen size                                                     */
+/* --------------------------------------------------------------- */
 .container {
   width: 960px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* The main bar contains a background image, a top bar and a       */
+/* slogan                                                          */
+/* --------------------------------------------------------------- */
 .mainBanner {
   background-image: url("../images/glasses-bg.png");
   background-repeat: no-repeat;
@@ -20,6 +58,22 @@ html {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 1024px) {
+  .mainBanner {
+    height: 22rem;
+  }
+}
+
+@media only screen and (max-width: 704px) {
+  .mainBanner {
+    height: 17rem;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* The top bar contains on the left a logo with the company name   */
+/* and on the right a menu                                         */
+/* --------------------------------------------------------------- */
 .topBar {
   background: cadetblue;
   color: white;
@@ -29,6 +83,15 @@ html {
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 1024px) {
+  .topBar {
+    margin-top: 0;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* The logo contains an image and the company name                 */
+/* --------------------------------------------------------------- */
 .logo {
   display: flex;
   align-items: center;
@@ -40,6 +103,9 @@ html {
   margin-right: 1rem;
 }
 
+/* --------------------------------------------------------------- */
+/* The menu                                                        */
+/* --------------------------------------------------------------- */
 nav {
   margin: 1rem 0 1rem 0;
 }
@@ -48,6 +114,9 @@ nav span {
   margin-right: 2rem;
 }
 
+/* --------------------------------------------------------------- */
+/* The slogan must be on the right with a little negative margin   */
+/* --------------------------------------------------------------- */
 .sloganRow {
   display: flex;
   flex-direction: column;
@@ -63,9 +132,41 @@ nav span {
 
 .slogan span {
   font-size: 2rem;
+  font-weight: bold;
   line-height: 1.2;
 }
 
+@media only screen and (max-width: 1024px) {
+  .slogan {
+    margin-top: 5rem;
+    margin-right: 2rem;
+    padding: 0.75rem 4rem;
+  }
+
+  .slogan span {
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 704px) {
+  .sloganRow {
+    display: block;
+  }
+  .slogan {
+    margin-top: 9rem;
+    margin-right: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .slogan span {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* The content of the page                                         */
+/* --------------------------------------------------------------- */
 .content {
   display: flex;
   align-items: center;
@@ -73,15 +174,19 @@ nav span {
   flex-direction: column;
 }
 
+/* --------------------------------------------------------------- */
+/* The list of services provided by the company                    */
+/* --------------------------------------------------------------- */
 .services {
   margin-top: 3rem;
   display: flex;
   justify-content: center;
 }
 
+/* The layout for on service                                       */
+/*    A service is presented by an image and a short label         */
 .service {
   width: 5rem;
-  height: 8rem;
   margin-right: 6rem;
   display: flex;
   flex-direction: column;
@@ -97,12 +202,41 @@ nav span {
   text-align: center;
 }
 
+@media only screen and (max-width: 704px) {
+  .services {
+    margin-top: 3.77rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    margin-right: 0;
+    margin-bottom: 1.54rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .service span {
+    margin: 1rem auto;
+    font-size: 0.77rem;
+  }
+}
+
+
+/* --------------------------------------------------------------- */
+/* Some additional infos                                           */
+/* --------------------------------------------------------------- */
 .infos {
   margin-top: 3rem;
   display: flex;
   justify-content: center;	
 }
 
+/* The layout of an additional info                                */
+/*    An info is presented as a title and a brief description      */
 .infoTitle {
   font-weight: bold;
   padding: 0.5rem 0 0.5rem 1.25rem;
@@ -117,6 +251,32 @@ nav span {
   margin-right: 5%;
 }
 
+@media only screen and (max-width: 704px) {
+  .infos {
+    margin-top: 3.77rem;
+    flex-direction: column;
+  }
+
+  .infoTitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .infoItem{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+
+  .infoItem p {
+    padding: 0 5%;
+    font-size: 0.77rem;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* The footer                                                      */
+/* --------------------------------------------------------------- */
 .footer {
   background: azure;
   margin-top: 5rem;
@@ -126,4 +286,12 @@ nav span {
 
 .footer .logo {
 	margin: 4rem 2rem;
+}
+
+@media only screen and (max-width: 704px) {
+  .footer .logo {
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+  }
 }
